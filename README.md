@@ -2,27 +2,18 @@
 
 Official public release feed for AIVAOS installers, checksums, and update metadata.
 
-Download the current approved release:
+> **No release has been published yet.**
+> The download links on this page will start working once the first release is cut.
+> Until then the releases page is empty — that is expected, not an outage.
 
 https://github.com/Smartoptimize/aivaos-releases/releases/latest
 
 ## What To Download
 
-- Apple Silicon Mac (M1, M2, M3, M4): `AIVAOS-<version>-mac-arm64.dmg`
-- Intel Mac: `AIVAOS-<version>-mac-x64.dmg`
 - Windows 10 and Windows 11: `AIVAOS-<version>-win-x64.exe`
 - Checksums: `SHA256SUMS`
 
-## Install On Mac
-
-AIVAOS requires macOS 12.0 or newer.
-
-1. Download the correct Mac install file for your computer (its name ends in `.dmg`).
-2. Open your Downloads folder and double-click the file you just downloaded.
-3. Drag the AIVAOS icon on top of the Applications folder.
-4. Open your Applications folder and double-click AIVAOS.
-
-The Mac version is signed by Apple, so it should open normally. If your Mac ever asks you to confirm, hold the **Control** key and click AIVAOS, choose **Open**, then confirm **Open**. If you still do not see an Open choice, open the Apple menu, choose **System Settings**, click **Privacy & Security**, scroll down, and click **Open Anyway** next to AIVAOS.
+macOS builds are not offered at this time.
 
 ## Install On Windows
 
@@ -42,6 +33,9 @@ That blue box shows up because AIVAOS is brand new and not yet registered with M
 
 These scripts install the AIVAOS localhost server and keep it running on a Linux
 server, so your AI team keeps working when your own computer is asleep.
+
+They need a published release to download from, so they will report a clean error
+until the first release exists. They never half-install.
 
 Install:
 
@@ -73,4 +67,4 @@ Customers should not clone the source repo, run build commands, handle signing c
 
 ## Updates
 
-AIVAOS uses this release feed for approved customer downloads and app updates. Installed copies check this feed on launch and every six hours, download verified updates in the background, and install them when the app is next closed. Customers install AIVAOS from release assets; the product codebase stays private.
+AIVAOS uses this release feed for approved customer downloads and app updates. Once releases are published, installed copies check this feed on launch and every six hours, download verified updates in the background, and install them when the app is next closed. Customers install AIVAOS from release assets; the product codebase stays private.
