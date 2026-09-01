@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AivaOS · Download</title>
+  <meta name="description" content="AivaOS is a local AI operating system: a company brain and a team of AI agents running on your own Windows PC or a Linux server you control.">
+  <meta property="og:title" content="AivaOS">
+  <meta property="og:description" content="Your AI team, running on your own machine. Download the official AivaOS installer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./site.css?v=2">
+</head>
+<body>
+  <div class="wrap">
+    <nav class="nav">
+      <div class="brand"><span class="brand-mark"></span>AivaOS</div>
+      <div class="nav-links">
+        <a href="#windows">windows</a>
+        <a href="#linux">linux</a>
+      </div>
+      <a class="btn btn-accent" href="#windows" data-scroll>Download</a>
+    </nav>
+
+    <header class="hero">
+      <div class="kicker">aivaos <span data-version>--version</span> · win-x64</div>
+      <h1>Your AI team, running on<br><em>your own machine.</em></h1>
+      <p class="lede">AivaOS is a local AI operating system: a company brain and a team of AI agents that run on a Windows PC you own, or a Linux server you control. No source code on this page — signed installers only.</p>
+      <div class="cta-row">
+        <a class="btn btn-accent btn-wide" id="primaryDownload" href="#windows" data-scroll>Download for Windows</a>
+        <a class="btn btn-ghost" href="#linux">Run it on a server instead</a>
+      </div>
+      <p class="proof" id="detectNote"></p>
+    </header>
+
+    <section class="section" id="windows">
+      <p class="section-label">01 · Windows</p>
+      <h2>Install on Windows</h2>
+      <p class="intro">AivaOS works on Windows 10 and Windows 11. No macOS build is offered at this time.</p>
+
+      <div class="term" id="downloadPanel">
+        <div class="term-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span>~/Downloads</div>
+        <div class="term-body">
+          <p class="loading" id="loadingMsg">fetching latest release…</p>
+          <div id="downloadCard" class="hidden"></div>
+          <p class="err hidden" id="downloadErr">
+            Could not reach the release feed right now. Grab the installer straight from
+            <a id="releasesLink" href="https://github.com/Smartoptimize/aivaos-releases/releases/latest">the Releases page</a> instead — that's not an outage, just this page being offline for a moment.
+          </p>
+        </div>
+      </div>
+
+      <div class="steps">
+        <div class="step"><div class="num">1</div><div><b>Download the installer</b><p class="intro" style="margin:6px 0 0">The filename ends in <code>.exe</code>.</p></div></div>
+        <div class="step"><div class="num">2</div><div><b>Open your Downloads folder and double-click it</b></div></div>
+        <div class="step"><div class="num">3</div><div><b>You'll see a blue box: "Windows protected your PC"</b><p class="intro" style="margin:6px 0 0">Normal for a brand-new app. It doesn't mean anything is wrong.</p></div></div>
+        <div class="step"><div class="num">4</div><div><b>Click <em>More info</em>, then <em>Run anyway</em></b><p class="intro" style="margin:6px 0 0">The <em>More info</em> link sits near the <em>Don't run</em> button — click that first.</p></div></div>
+        <div class="step"><div class="num">5</div><div><b>Click <em>Yes</em> on the "allow this app to make changes" prompt</b></div></div>
+        <div class="step"><div class="num">6</div><div><b>Follow the setup screens</b></div></div>
+      </div>
+      <p class="fine">That blue box shows up because AivaOS is brand new and not yet registered with Microsoft. It's safe to install — it comes straight from this official release page.</p>
+    </section>
+
+    <section class="section" id="linux">
+      <p class="section-label">02 · Server</p>
+      <h2>Run AivaOS on a server (Linux)</h2>
+      <p class="intro">Installs the AivaOS localhost server and keeps it running on a Linux server, so your AI team keeps working while your own computer is asleep.</p>
+
+      <div class="term">
+        <div class="term-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span>install</div>
+        <pre><code>bash &lt;(curl -fsSL https://raw.githubusercontent.com/Smartoptimize/aivaos-releases/main/install-linux.sh)</code></pre>
+      </div>
+      <div class="term">
+        <div class="term-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span>keep running across reboots</div>
+        <pre><code>bash &lt;(curl -fsSL https://raw.githubusercontent.com/Smartoptimize/aivaos-releases/main/vps-service-linux.sh)</code></pre>
+      </div>
+      <div class="term">
+        <div class="term-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span>update to the newest release</div>
+        <pre><code>curl -fsSL -o vps-update-linux.sh https://raw.githubusercontent.com/Smartoptimize/aivaos-releases/main/vps-update-linux.sh
+curl -fsSL -o install-linux.sh    https://raw.githubusercontent.com/Smartoptimize/aivaos-releases/main/install-linux.sh
+bash vps-update-linux.sh</code></pre>
+      </div>
+    </section>
+
+    <footer>
+      <p><strong>This public repository is the AivaOS release feed only.</strong> Installers, checksums, update metadata, and this download page. The product source code is private. You don't need to clone anything, run build commands, or use Git to install AivaOS.</p>
+      <p>Need help? Tell us your computer type, the file you downloaded, the step where you got stuck, and the exact message on screen. Never send passwords, keys, or recovery codes.</p>
+    </footer>
+  </div>
+  <script src="./site.js?v=2"></script>
+</body>
+</html>
